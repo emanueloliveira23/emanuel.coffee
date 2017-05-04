@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emanuel Oliveira</title>
+    <meta charset="utf-8"/>
+    <meta author="Emanuel Oliveira; emanuel.oliveira23@gmail.com"/>
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <style>
+      html, body {
+          height: 100%;
+          margin: 0;
+          cursor: pointer;
+      }
+      .container {
+        background-color: #6f4e37;
+        font-family: 'Reenie Beanie', monospace;
+        width: 100%;
+        height: 100%;
+
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text {
+        color: #ffddc5;
+        display: inline;
+        font-size: 100px;
+        text-shadow: 0 2px 2px #483223;
+      }
+      .animetext {
+        -webkit-animation: animetext 4s infinite;
+                animation: animetext 4s infinite;
+      }
+      @keyframes animetext {
+          0% { text-shadow: 0 2px 2px #483223; }
+          25% { text-shadow: 0 50px 20px #483223; font-size: 125px; }
+          50% { text-shadow: 0 2px 2px #483223; font-size: 100px; }
+          75% { text-shadow: 0 -50px 20px #483223; font-size: 125px; }
+          100% { text-shadow: 0 2px 2px #483223; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">Emanuel Oliveira</div>
+    </div>
+  </body>
+  <script>
+    function toogle(selector, animeClass) {
+      var elements = document.querySelectorAll(selector);
+      for (var i = 0, l = elements.length; i < l; i++) {
+        if (elements[i].classList.contains(animeClass)) {
+          elements[i].classList.remove(animeClass);
+        } else {
+          elements[i].classList.add(animeClass);
+        }
+      }
+    }
+    function toogleAnime() {
+      toogle('.text', 'animetext');
+    };
+    document.querySelector('.container').addEventListener('click', toogleAnime);
+  </script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<htlm>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Login SIGAA</title>
+
+    <style>
+      html {
+        height: 100%;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: linear-gradient(#ac7fe6, #f2cbff);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 4px;
+        box-shadow: 0 0 10px #ac7fe6;
+      }
+      input {
+        font-size: 10pt;
+      }
+      input:focus {
+        outline: none;
+        box-shadow: 0 4px 4px #ac7fe6;
+      }
+      input[type="text"],
+      input[type="password"] {
+        display: block;
+        border: none;
+        padding: 5px;
+        background-color: transparent;
+        border-bottom: white solid 1px;
+        color: white;
+      }
+      label {
+        margin-bottom: 20px;
+        color: white;
+        font-weight: lighter;
+      }
+      input[type="submit"] {
+        border: none;
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 2px;
+        color: #ac7fe6;
+      }
+      input[type="submit"]:active {
+        background-color: #eee;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <form method="post" action="https://si3.ufc.br/sigaa/logar.do?dispatch=logOn">
+
+      <label>
+        usuário:
+        <input type="text" name="user.login"/>
+      </label>
+
+      <label>
+        senha:
+        <input type="password" name="user.senha"/>
+      </label>
+
+      <input type="submit" name="entrar" value="Entrar"/>
+
+    </form>
+
+  </body>
+
+</html>
